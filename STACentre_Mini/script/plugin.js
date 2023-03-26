@@ -9,10 +9,10 @@ $(function () {
     ZC_AUTHOR_REGEX: "{%host%}author/{%alias%}/{%page%}/",
   };
   $("a[href$='list.php']").after(
-    '<a class="js-run" title="一键设置" href="javascript:;"><span class="m-left">一键设置</span></a>'
+    "<a class=\"js-run\" title=\"一键设置\" href=\"javascript:;\"><span class=\"m-left\">一键设置</span></a>",
   );
   $(".js-run").click(function () {
-    $(':radio[name="ZC_STATIC_MODE"]').eq(1).click();
+    $(":radio[name=\"ZC_STATIC_MODE\"]").eq(1).click();
     // changeOptions(2);
     fnHideEl();
     for (const el in map) {
