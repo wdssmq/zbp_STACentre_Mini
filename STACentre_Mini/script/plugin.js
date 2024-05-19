@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   const map = {
     ZC_ARTICLE_REGEX: "{%host%}post/{%alias%}.html",
     ZC_PAGE_REGEX: "{%host%}{%alias%}.html",
@@ -11,7 +11,7 @@ $(function () {
   $("a[href$='list.php']").after(
     "<a class=\"js-run\" title=\"一键设置\" href=\"javascript:;\"><span class=\"m-left\">一键设置</span></a>",
   );
-  $(".js-run").click(function () {
+  $(".js-run").click(function() {
     $(":radio[name=\"ZC_STATIC_MODE\"]").eq(1).click();
     // changeOptions(2);
     fnHideEl();
@@ -21,7 +21,7 @@ $(function () {
     }
   });
   function fnHideEl() {
-    $("#edit table tr").each(function () {
+    $("#edit table tr").each(function() {
       const elRadio = $(this).find("td input[type='radio']");
       if (elRadio.length > 0) {
         $(this).hide();
